@@ -273,6 +273,7 @@ module Props =
         | Fill of string
         /// The presentation attribute of a rectangle in bar or a sector in pie.
         | Stroke of string
+        interface Fable.React.Props.IProp
         static member inline Custom(key: string, value: obj): Cell = !!(key, value)
 
     type [<RequireQualifiedAccess>] Text =
