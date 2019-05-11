@@ -598,9 +598,12 @@ open Fable.React
 open Props
 
 #if FABLE_REPL_LIB
-let [<Global>] private Recharts = obj()
-let inline private ofImport (importMember: string) (_importPath: string) (props: 'P) (children: React.ReactElement seq): React.ReactElement =
-    ReactBindings.React.createElement(Recharts?(importMember), props, children)
+module ReplInternalHelpers =
+    let [<Global>] Recharts = obj()
+    let inline ofImport (importMember: string) (_importPath: string) (props: 'P) (children: React.ReactElement seq): React.ReactElement =
+        ReactBindings.React.createElement(Recharts?(importMember), props, children)
+
+open ReplInternalHelpers
 #endif
 
 // Charts
