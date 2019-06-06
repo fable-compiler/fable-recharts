@@ -148,13 +148,13 @@ module Props =
         | OuterRadius of obj
 
         // Events
-        | OnClick of (MouseEvent -> unit)
-        | OnMouseDown of (MouseEvent -> unit)
-        | OnMouseUp of (MouseEvent -> unit)
-        | OnMouseMove of (MouseEvent -> unit)
-        | OnMouseOver of (MouseEvent -> unit)
-        | OnMouseEnter of (MouseEvent -> unit)
-        | OnMouseLeave of (MouseEvent -> unit)
+        | OnClick of (obj ->MouseEvent -> unit)
+        | OnMouseDown of (obj -> MouseEvent -> unit)
+        | OnMouseUp of (obj -> MouseEvent -> unit)
+        | OnMouseMove of (obj -> MouseEvent -> unit)
+        | OnMouseOver of (obj -> MouseEvent -> unit)
+        | OnMouseEnter of (obj -> MouseEvent -> unit)
+        | OnMouseLeave of (obj -> MouseEvent -> unit)
 
         interface Fable.React.Props.IProp
         static member inline Custom(key: string, value: obj): Chart = !!(key, value)
@@ -216,13 +216,13 @@ module Props =
         | Content of obj
         /// The style of legend container which is a "position: absolute;" div element. Because the position of legend is quite flexible, so you can change the position by the value of top, left, right, bottom in this option. And the format of wrapperStyle is the same as React inline style.
         | WrapperStyle of obj
-        | OnClick of (MouseEvent -> unit)
-        | OnMouseDown of (MouseEvent -> unit)
-        | OnMouseUp of (MouseEvent -> unit)
-        | OnMouseMove of (MouseEvent -> unit)
-        | OnMouseOver of (MouseEvent -> unit)
-        | OnMouseEnter of (MouseEvent -> unit)
-        | OnMouseLeave of (MouseEvent -> unit)
+        | OnClick of (obj -> int -> MouseEvent -> unit)
+        | OnMouseDown of (obj -> int -> MouseEvent -> unit)
+        | OnMouseUp of (obj -> int -> MouseEvent -> unit)
+        | OnMouseMove of (obj -> int -> MouseEvent -> unit)
+        | OnMouseOver of (obj -> int -> MouseEvent -> unit)
+        | OnMouseEnter of (obj -> int -> MouseEvent -> unit)
+        | OnMouseLeave of (obj -> int -> MouseEvent -> unit)
         interface Fable.React.Props.IProp
         static member inline Custom(key: string, value: obj): Legend = !!(key, value)
 
@@ -486,14 +486,14 @@ module Props =
         // Events
         /// Brush: The handler of changing the active scope of brush.
         | OnChange of (unit -> unit) // TODO: Check args
-        | OnClick of (MouseEvent -> unit)
-        | OnMouseDown of (MouseEvent -> unit)
-        | OnMouseUp of (MouseEvent -> unit)
-        | OnMouseOver of (MouseEvent -> unit)
-        | OnMouseOut of (MouseEvent -> unit)
-        | OnMouseEnter of (MouseEvent -> unit)
-        | OnMouseMove of (MouseEvent -> unit)
-        | OnMouseLeave of (MouseEvent -> unit)
+        | OnClick of (obj -> int -> MouseEvent -> unit)
+        | OnMouseDown of (obj -> int -> MouseEvent -> unit)
+        | OnMouseUp of (obj -> int -> MouseEvent -> unit)
+        | OnMouseOver of (obj -> int -> MouseEvent -> unit)
+        | OnMouseOut of (obj -> int -> MouseEvent -> unit)
+        | OnMouseEnter of (obj -> int -> MouseEvent -> unit)
+        | OnMouseMove of (obj -> int -> MouseEvent -> unit)
+        | OnMouseLeave of (obj -> int -> MouseEvent -> unit)
 
         interface Fable.React.Props.IProp
         static member inline Custom(key: string, value: obj): Cartesian = !!(key, value)
@@ -577,14 +577,14 @@ module Props =
         | Scale of ScaleType
 
         // Events
-        | OnClick of (MouseEvent -> unit)
-        | OnMouseDown of (MouseEvent -> unit)
-        | OnMouseUp of (MouseEvent -> unit)
-        | OnMouseOver of (MouseEvent -> unit)
-        | OnMouseOut of (MouseEvent -> unit)
-        | OnMouseEnter of (MouseEvent -> unit)
-        | OnMouseMove of (MouseEvent -> unit)
-        | OnMouseLeave of (MouseEvent -> unit)
+        | OnClick of (obj -> int -> MouseEvent -> unit)
+        | OnMouseDown of (obj -> int -> MouseEvent -> unit)
+        | OnMouseUp of (obj -> int -> MouseEvent -> unit)
+        | OnMouseOver of (obj -> int -> MouseEvent -> unit)
+        | OnMouseOut of (obj -> int -> MouseEvent -> unit)
+        | OnMouseEnter of (obj -> int -> MouseEvent -> unit)
+        | OnMouseMove of (obj -> int -> MouseEvent -> unit)
+        | OnMouseLeave of (obj -> int -> MouseEvent -> unit)
 
         interface Fable.React.Props.IProp
         static member inline Custom(key: string, value: obj): Polar = !!(key, value)

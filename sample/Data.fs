@@ -5,6 +5,7 @@ open Fable.Core
 type Data = { name: string; uv: int; pv: int; amt: int }
 type Data01 = { day: string; weather: string }
 type RangeData = { day: string; temperature: int * int }
+type PolarData = { name: string; value: int }
 
 let data =
     [| { name = "Page A"; uv = 4000; pv = 2400; amt = 2400 }
@@ -47,3 +48,10 @@ let rangeData =
        { day = "05-08"; temperature = (0, 8) }
        { day = "05-09"; temperature = (-3, 5) }
    |]
+
+let polarData = 
+    [| { name = "Group A"; value = 400 }
+       { name = "Group B"; value = 300 }
+       { name = "Group C"; value = 300 }
+       { name = "Group D"; value = 200 }
+    |]
