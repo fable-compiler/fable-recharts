@@ -1,5 +1,6 @@
 module App
 
+open Fable.Core
 open Fable.Recharts
 open Fable.Recharts.Props
 module R = Fable.React.Standard
@@ -10,10 +11,10 @@ let margin t r b l =
     Chart.Margin { top = t; bottom = b; right = r; left = l }
 
 let private onMouseEvent data evt = // should have sig (data, activeIndex, event)
-  printf "%s %O" (Fable.Core.JS.JSON.stringify data) evt
+  JS.console.log("MOUSE:", data, evt)
 
 let private onMouseEventIndexed data index evt = // should have sig (data, activeIndex, event)
-  printf "%s %i %O" (Fable.Core.JS.JSON.stringify data) index evt
+  JS.console.log("MOUSE:", "Group " + string index, data, evt)
 
 let lineChartSample() =
     lineChart
@@ -106,8 +107,9 @@ let pieChartSample() =
             Legend.OnMouseEnter onMouseEventIndexed
           ] []
           pie [
-            Polar.Data polarData;
-            Polar.Label true;
+            Polar.Data polarData
+            Polar.DataKey "value"
+            Polar.Label true
             Polar.OnClick onMouseEventIndexed
             Polar.OnMouseEnter onMouseEventIndexed
             P.Fill "#8884d8"

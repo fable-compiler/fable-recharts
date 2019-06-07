@@ -1,3 +1,7 @@
+### 1.1.0
+
+* Fix #2: events signature @projecteon
+
 ### 1.0.0
 
 * Stable release
