@@ -518,7 +518,7 @@ module Props =
         /// Pie: The key of each sector's name.
         | NameKey of string
         /// Pie: The index of active sector in Pie, this option can be changed in mouse event handlers.
-        | ActiveInex of System.Array
+        | ActiveIndex of System.Array
         /// Pie: The shape of active sector.
         | ActiveShape of obj
         | PolarAngles of System.Array
