@@ -1,3 +1,7 @@
+### 1.1.1
+
+* Fix `activeIndex` typo @saboco
+
 ### 1.1.0
 
 * Fix #2: events signature @projecteon
