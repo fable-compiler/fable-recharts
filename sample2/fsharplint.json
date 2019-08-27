@@ -1,0 +1,13 @@
+{
+    "conventions" :{
+        "naming" :{
+            "memberNames": { 
+                "enabled": true,
+                "config": {
+                    "naming": "camelCase",
+                    "underscores": "None"
+                }
+            }
+        }
+    }
+}
