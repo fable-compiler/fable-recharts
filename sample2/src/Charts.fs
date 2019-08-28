@@ -60,7 +60,7 @@ let colors = ["#0088FE"; "#00C49F"; "#FFBB28"; "#FF8042"]
 let private onPieEnter dispatch =
     let dis cmd =
         dispatch cmd
-    fun _ index _ -> dis (SetActiveIndex [|index|])
+    fun _ index _ -> dis (SetActiveIndex index)
 
 let polarDataA count =
     let positive = if count > 0 then count else 100

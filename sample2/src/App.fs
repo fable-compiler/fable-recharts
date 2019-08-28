@@ -9,7 +9,7 @@ open Fable.React.Props
 open Models
 open Charts
 
-let init() : Model  = { Counter = 0; ActiveIndex = [|0|] }
+let init() : Model  = { Counter = 0; ActiveIndex = 0 }
 
 // UPDATE
 
@@ -21,13 +21,18 @@ let update (msg:Msg) (model:Model) =
 
 // VIEW (rendered with React)
 
+let mkButton txt onClick =
+    button [ Style [ Width "100px"; Margin "0 auto" ]
+             OnClick (fun _ -> onClick()) ]
+           [ str txt ]
+
 let view (model:Model) dispatch =
   div [] [
     div [] [ pieChartSample model dispatch]
-    div [ Style [ Width "100%"; Display DisplayOptions.InlineGrid]]
+    div [ Style [ Width "800px"; Display DisplayOptions.InlineGrid]]
         [ span [ Style [TextAlign TextAlignOptions.Center] ] [str (sprintf "Counter: %i" model.Counter)]
-          button [ OnClick (fun _ -> dispatch Increment) ] [ str "+" ]
-          button [ OnClick (fun _ -> dispatch Decrement) ] [ str "-" ] ] ]
+          mkButton "+" (fun _ -> dispatch Increment) 
+          mkButton "-" (fun _ -> dispatch Decrement) ] ]
 
 // App
 Program.mkSimple init update view

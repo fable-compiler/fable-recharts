@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "fable build.fsx --run",
-    "start": "webpack-dev-server --config sample/webpack.config.js"
+    "start": "webpack-dev-server --config sample2/webpack.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",

@@ -10,6 +10,9 @@
   <ItemGroup>
     <PackageReference Include="Fable.Core" Version="3.0.0" />
     <PackageReference Include="Fable.Elmish.React" Version="3.0.1" />
-    <PackageReference Include="Fable.Recharts" Version="1.1.1" />
+    <!-- <PackageReference Include="Fable.Recharts" Version="1.1.1" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Fable.Recharts.fsproj" />
   </ItemGroup>
 </Project>
