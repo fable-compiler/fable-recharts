@@ -58,9 +58,8 @@ let private onPieClick (dispatch : Msg -> unit)  =
 let colors = ["#0088FE"; "#00C49F"; "#FFBB28"; "#FF8042"]
 
 let private onPieEnter dispatch =
-    let dis cmd =
-        dispatch cmd
-    fun _ index _ -> dis (SetActiveIndex index)
+    fun _ (index : int) _ -> 
+        dispatch (SetActiveIndex [|index|])
 
 let polarDataA count =
     let positive = if count > 0 then count else 100
@@ -74,6 +73,7 @@ let polarDataB =
     [| { name = "Group A"; value = 1000 }
        { name = "Group B"; value = 450 }
        { name = "Group C"; value = 600 }
+       { name = "Group X"; value = 200 }
     |]
 
 let renderActiveShape (data : IPolarProps) =
