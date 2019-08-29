@@ -1,8 +1,8 @@
 module Models
 
-type Model = { Counter: int; ActiveIndex : int }
+type Model = { Counter: int; ActiveIndex : System.Array }
 
 type Msg =
 | Increment
 | Decrement
-| SetActiveIndex of int
+| SetActiveIndex of System.Array

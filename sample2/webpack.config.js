@@ -7,7 +7,7 @@ var publicDir = path.join(__dirname, "./public");
 
 module.exports = {
     mode: "development",
-    entry: path.join(__dirname, "./src/App.fsproj"),
+    entry: path.join(__dirname, "./src/Fable.Recharts.Sample2.fsproj"),
     output: {
         path: publicDir,
         filename: "bundle.js",

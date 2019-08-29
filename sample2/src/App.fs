@@ -9,7 +9,7 @@ open Fable.React.Props
 open Models
 open Charts
 
-let init() : Model  = { Counter = 0; ActiveIndex = 0 }
+let init() : Model  = { Counter = 0; ActiveIndex = [|0;2|] }
 
 // UPDATE
 
