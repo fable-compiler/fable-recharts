@@ -59,7 +59,9 @@ let colors = ["#0088FE"; "#00C49F"; "#FFBB28"; "#FF8042"]
 
 let private onPieEnter dispatch =
     fun _ (index : int) _ -> 
-        dispatch (SetActiveIndex [|index|])
+        let indexes = ResizeArray()
+        indexes.Add(index)
+        dispatch (SetActiveIndex indexes)
 
 let polarDataA count =
     let positive = if count > 0 then count else 100
