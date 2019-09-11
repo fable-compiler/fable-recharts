@@ -1,3 +1,7 @@
+### 1.1.2
+
+* Fix `activeIndex` argument type @saboco
+
 ### 1.1.1
 
 * Fix `activeIndex` typo @saboco
