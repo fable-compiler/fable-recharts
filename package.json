@@ -14,7 +14,7 @@
     "fable-splitter": "^2.1.10",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "recharts": "^1.7.1",
+    "recharts": "^2.1.14",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.0"
