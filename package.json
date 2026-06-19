@@ -6,7 +6,7 @@
     "sample2": "webpack-dev-server --config sample2/webpack.config.js"
   },
   "dependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.29.6",
     "fable-compiler": "^2.3.20",
     "fable-compiler-js": "^1.0.5",
     "fable-loader": "^2.1.8",
